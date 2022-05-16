@@ -56,16 +56,21 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripte\sNpcMoveFollow.cs" />
-    <Compile Include="Assets\Scripte\sFollowCam.cs" />
-    <Compile Include="Assets\Scripte\sNpcMoveRandom.cs" />
-    <Compile Include="Assets\Scripte\sPlayerMove.cs" />
-    <Compile Include="Assets\Scripte\sFollowTitle.cs" />
-    <Compile Include="Assets\Scripte\sNpcMoveRandomTimeDelay.cs" />
+    <Compile Include="Assets\Script\sNpcMoveFollow.cs" />
+    <Compile Include="Assets\Script\sFollowCam.cs" />
+    <Compile Include="Assets\Script\sSpawn.cs" />
+    <Compile Include="Assets\Script\sEnemyHealth.cs" />
+    <Compile Include="Assets\Script\sNpcMoveRandom.cs" />
+    <Compile Include="Assets\Script\sPlayerAttack.cs" />
+    <Compile Include="Assets\Script\sPlayerMove.cs" />
+    <Compile Include="Assets\Script\sFollowTitle.cs" />
+    <Compile Include="Assets\Script\sNpcMoveRandomTimeDelay.cs" />
+    <Compile Include="Assets\Script\sScoreText.cs" />
+    <Compile Include="Assets\Script\sSubText.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\SimpleLowPolyNature\Readme.txt" />
-    <None Include="Assets\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
+    <None Include="Assets\YourAssets\SimpleLowPolyNature\Readme.txt" />
+    <None Include="Assets\YourAssets\SimpleLowPolyNature\Shaders\SimpleWater.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
