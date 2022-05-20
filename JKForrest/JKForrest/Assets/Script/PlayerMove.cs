@@ -41,11 +41,16 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 20;
+            GetComponent<Animator>().SetBool("Fly", true);
+            speed = 8;
         }
 
         else
+        {
             speed = 2;
+            GetComponent<Animator>().SetBool("Fly", false);
+        }
+            
 
     }
 }

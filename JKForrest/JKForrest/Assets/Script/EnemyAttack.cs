@@ -10,12 +10,6 @@ public class EnemyAttack : MonoBehaviour
     float time;
     bool bInRange;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.Find("Player");
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == player)
@@ -32,16 +26,44 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
+    int attackStep = 0;
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
 
-        if(time >= 0.5f && bInRange)
+        if (bInRange == true && attackStep == 0 && time >= 0.5f)
         {
             time = 0;
-            player.GetComponent<PlayerHealth>().Damage(50);
-            
+            GetComponent<Animator>().SetBool("Attack", true);
+            attackStep++;
+        }
+
+        else if (bInRange == true && attackStep == 1 && time >= 0.45f)
+        {
+            time = 0;
+            player.GetComponent<PlayerHealth>().Damage(5);
+            attackStep++;
+        }
+
+        else if(bInRange == true && attackStep == 2 && time >= 1.0f)
+        {
+            time = 0;
+            GetComponent<Animator>().SetBool("Attack", false);
+            attackStep = 0;
+        }
+
+        else if( bInRange == false && time >= 1.0f)
+        {
+            time = 0;
+            GetComponent<Animator>().SetBool("Attack", false);
+            attackStep = 0;
         }
 
         if (player.GetComponent<PlayerHealth>().hp <= 0)

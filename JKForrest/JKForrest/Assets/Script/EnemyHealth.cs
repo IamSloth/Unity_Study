@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
 {
 
     public int hp = 100;
+    public bool isBoss;
     public RawImage imgBar;
     public void Damage(int amount)
     {
@@ -17,15 +18,13 @@ public class EnemyHealth : MonoBehaviour
         hp -= amount;
         imgBar.transform.localScale = new Vector3(hp/100.0f, 1 , 1);
 
-
-
         if(hp <= 0)
         {
             GetComponent<Animator>().SetTrigger("Death");
             GetComponent<NavMeshAgent>().isStopped = true;
 
             Destroy(gameObject, 2);
-            GameObject.Find("GameManager").GetComponent<Spawn>().count--;
+            //GameObject.Find("GameManager").GetComponent<Spawn>().count--;
             GameObject.Find("GameManager").GetComponent<Spawn>().killCount++;
 
             if (GameObject.Find("GameManager").GetComponent<Spawn>().killCount == 1)

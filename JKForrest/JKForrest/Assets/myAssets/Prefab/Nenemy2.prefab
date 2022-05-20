@@ -1405,11 +1405,10 @@ GameObject:
   - component: {fileID: 1069943069575642024}
   - component: {fileID: 1069943069575642039}
   - component: {fileID: 1069943069575642036}
-  - component: {fileID: 1662385123}
   - component: {fileID: 1662385124}
   m_Layer: 6
   m_Name: Nenemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1446,7 +1445,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 84b0f60a09785f64fb5fd0174e056ab1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1490,10 +1489,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 6
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 90
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1514,20 +1513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  isBoss: 0
   imgBar: {fileID: 585926970}
---- !u!135 &1662385123
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6349483982210976618}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.8
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1662385124
 MonoBehaviour:
   m_ObjectHideFlags: 0
